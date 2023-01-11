@@ -1,0 +1,167 @@
+
+.cabecalhoPrincipal .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#burguer {
+  display: none;
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+}
+
+.videoSobre .container {
+  display: flex;
+}
+
+.videoSobre-sobre {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.videoSobre-sobre-list {
+  flex-grow: 1;
+}
+
+.videoSobre-video {
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+
+.rodapePrincipal-patrocinadores .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+  width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+  display: flex;
+}
+
+.rodapePrincipal-navMap-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 250px;
+}
+
+.conteudoPrincipal-cursos {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.conteudoPrincipal-cursos-link {
+  width: 23%;
+  /* margin-bottom: 1%; */
+}
+
+/*
+A título de curiosidade ele resolve as margins da extremidade do grid assim: 
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+ margin-right: 0;
+}*/
+
+/* .conteudoPrincipal-cursos-link:nth-child(4n+1)  {
+  margin-left: 0;
+} */
+@media(max-width: 768px) {
+.cabecalhoPrincipal-nav {
+  flex-direction: column;
+}
+
+#burguer {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  gap: .5rem;
+  margin: 0 auto;
+}
+
+#menu-icon {
+  display: block;
+  width: 20px;
+  border-top: 2px solid ;
+}
+
+#menu-icon::after, #menu-icon::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-top: 5px;
+  background-color: currentColor;
+  position: relative;
+}
+
+#cabecalhoPrincipal-navbar {
+display: none;
+}
+
+#cabecalhoPrincipal-navbar.active {
+  display: flex;
+}
+
+.cabecalhoPrincipal .container {
+  flex-direction: column;
+  align-items: initial;
+  /*align-items dita o eixo cruzado, agora horizontal*/
+  text-align: center;
+}
+
+.conteudoPrincipal-cursos-link {
+  width: 100%;
+}
+/* se liga que quem ta como flex é o pai, então ele recebe o wrap */
+.conteudoPrincipal-cursos {
+  flex-direction: column;
+}
+
+.rodapePrincipal-navMap-list {
+  height: auto;
+}
+
+.rodapePrincipal-patrocinadores .container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.rodapePrincipal-patrocinadores-list {
+  margin: 0;
+  width: 100%;
+}
+
+.rodapePrincipal-contatoForm {
+  width: auto;
+}
+
+.cabecalhoPrincipal-nav-link-app {
+  order: -1;
+}
+
+.videoSobre .container {
+  flex-direction: column;
+}
+
+.videoSobre-video {
+  margin: 0 auto;
+}
+
+}
